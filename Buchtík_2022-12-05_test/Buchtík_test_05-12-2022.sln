@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buchtík_test_05-12-2022", "Buchtík_test_05-12-2022\Buchtík_test_05-12-2022.csproj", "{3AEA48A7-5B2D-4DEC-A6C9-2C608F932FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AEA48A7-5B2D-4DEC-A6C9-2C608F932FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEA48A7-5B2D-4DEC-A6C9-2C608F932FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEA48A7-5B2D-4DEC-A6C9-2C608F932FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEA48A7-5B2D-4DEC-A6C9-2C608F932FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05064662-5E89-4EAA-AC1A-0AD7A1955289}
+	EndGlobalSection
+EndGlobal

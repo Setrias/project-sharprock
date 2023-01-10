@@ -1,0 +1,12 @@
+zadávání
+- h výška [m] jednou
+- t čas [s] 10x
+- 10 měření
+
+po zadání 10-ti čísel deaktivovat a vypočítat 'g'
+
+h = 1/2*g*t^2
+
+g = 2h/t^2
+
+btnReset
