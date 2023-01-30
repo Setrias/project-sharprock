@@ -65,6 +65,7 @@ namespace tvary_komplexniho_cisla
             this.buttonZadatHodnoty.TabIndex = 1;
             this.buttonZadatHodnoty.Text = "Zadat hodnoty";
             this.buttonZadatHodnoty.UseVisualStyleBackColor = true;
+            this.buttonZadatHodnoty.Click += new System.EventHandler(this.buttonZadatHodnoty_Click);
             // 
             // label2
             // 
@@ -72,7 +73,7 @@ namespace tvary_komplexniho_cisla
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(80, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 16);
+            this.label2.Size = new System.Drawing.Size(93, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Algebraický tvar:";
             // 
@@ -82,7 +83,7 @@ namespace tvary_komplexniho_cisla
             this.labelAlgebTvar.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelAlgebTvar.Location = new System.Drawing.Point(194, 113);
             this.labelAlgebTvar.Name = "labelAlgebTvar";
-            this.labelAlgebTvar.Size = new System.Drawing.Size(81, 16);
+            this.labelAlgebTvar.Size = new System.Drawing.Size(80, 16);
             this.labelAlgebTvar.TabIndex = 4;
             this.labelAlgebTvar.Text = "labelAlgebTvar";
             // 
@@ -92,7 +93,7 @@ namespace tvary_komplexniho_cisla
             this.labelGonioTvar.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelGonioTvar.Location = new System.Drawing.Point(194, 138);
             this.labelGonioTvar.Name = "labelGonioTvar";
-            this.labelGonioTvar.Size = new System.Drawing.Size(81, 16);
+            this.labelGonioTvar.Size = new System.Drawing.Size(80, 16);
             this.labelGonioTvar.TabIndex = 6;
             this.labelGonioTvar.Text = "labelGonioTvar";
             // 
@@ -102,7 +103,7 @@ namespace tvary_komplexniho_cisla
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(80, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 16);
+            this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Goniometrický tvar:";
             // 
@@ -112,7 +113,7 @@ namespace tvary_komplexniho_cisla
             this.labelExponTvar.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelExponTvar.Location = new System.Drawing.Point(194, 163);
             this.labelExponTvar.Name = "labelExponTvar";
-            this.labelExponTvar.Size = new System.Drawing.Size(83, 16);
+            this.labelExponTvar.Size = new System.Drawing.Size(82, 16);
             this.labelExponTvar.TabIndex = 8;
             this.labelExponTvar.Text = "labelExponTvar";
             // 
@@ -122,7 +123,7 @@ namespace tvary_komplexniho_cisla
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.Location = new System.Drawing.Point(80, 163);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 16);
+            this.label6.Size = new System.Drawing.Size(102, 16);
             this.label6.TabIndex = 7;
             this.label6.Text = "Exponenciální tvar:";
             // 
@@ -148,7 +149,7 @@ namespace tvary_komplexniho_cisla
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(12, 47);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Reálné:";
             // 
@@ -158,7 +159,7 @@ namespace tvary_komplexniho_cisla
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(12, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Imaginární:";
             // 
@@ -171,6 +172,7 @@ namespace tvary_komplexniho_cisla
             this.buttonVypocet.TabIndex = 13;
             this.buttonVypocet.Text = "Výpočet";
             this.buttonVypocet.UseVisualStyleBackColor = true;
+            this.buttonVypocet.Click += new System.EventHandler(this.buttonVypocet_Click);
             // 
             // Form1
             // 
