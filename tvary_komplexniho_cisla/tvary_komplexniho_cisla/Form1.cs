@@ -16,6 +16,12 @@ namespace tvary_komplexniho_cisla
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            labelAlgebTvar.Text = "";
+            labelGonioTvar.Text = "";
+            labelExponTvar.Text = "";
+        }
 
         struct komplexniCislo // datový typ (jako např 'int' nebo 'double')
         {
@@ -23,35 +29,32 @@ namespace tvary_komplexniho_cisla
             public int imaginarni;
         }
 
-        private komplexniCislo kompCislo; // deklarace, stejně jako u např.: 'private int cislo;'
+        private komplexniCislo komCis; // deklarace, stejně jako u např.: 'private int cislo;'
 
         private void buttonZadatHodnoty_Click(object sender, EventArgs e)
         {
             // přístup do jedné ze složek 'struct komplexniCislo'$
-            kompCislo.realne = Convert.ToInt32(numericUpDownRealne.Value);
-            kompCislo.imaginarni = Convert.ToInt32(numericUpDownImaginarni.Value);
-
-            numericUpDownRealne.Enabled = false;
-            numericUpDownImaginarni.Enabled = false;
-            buttonZadatHodnoty.Enabled = false;
+            komCis.realne = Convert.ToInt32(numericUpDownRealne.Value);
+            komCis.imaginarni = Convert.ToInt32(numericUpDownImaginarni.Value);
         }
 
         private void buttonVypocet_Click(object sender, EventArgs e)
         {
-            // labelAlgebTvar.Text = kompCislo.realne + " + i" + kompCislo.imaginarni;   // výpis '2 + i2'
-            labelAlgebTvar.Text = Convert.ToString(kompCislo.realne + kompCislo.imaginarni);
+            // absolutní hodnota
+            double absolutniHodnota = Math.Sqrt((komCis.realne * komCis.realne) + (komCis.imaginarni * komCis.imaginarni));
+
+            // úhel
+            double uhel = Math.Atan(komCis.imaginarni / komCis.realne);
+
+            // Algebraický tvar
+            labelAlgebTvar.Text = Convert.ToString(komCis.realne + komCis.imaginarni);
+
+            // Goniometrický tvar
+            labelGonioTvar.Text = Convert.ToString(absolutniHodnota * (Math.Cos(uhel) + Math.Sin(uhel)));
 
 
-            // nefim
-            labelGonioTvar.Text = Convert.ToString(Math.Cos(kompCislo.realne)+Math.Sin(kompCislo.imaginarni));
-
-
-
-            // výpočet absolutní hodnoty
-            double absolutniHodnota =
-                Math.Sqrt((kompCislo.realne * kompCislo.realne) + (kompCislo.imaginarni * kompCislo.imaginarni));
-            // výpočet exponenciálního tvaru
-            labelExponTvar.Text = Convert.ToString(absolutniHodnota * Math.Pow(Math.E, Math.Atan(kompCislo.imaginarni)));
+            // Exponenciální tvar
+            labelExponTvar.Text = Convert.ToString(absolutniHodnota * Math.Pow(Math.E, uhel));
         }
     }
 }
