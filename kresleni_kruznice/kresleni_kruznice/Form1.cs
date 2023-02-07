@@ -29,7 +29,7 @@ namespace kresleni_kruznice
             kresPlocha.DrawLine(Pens.Green, 250,0,250,500);     // bottom vertical
             kresPlocha.DrawLine(Pens.BlueViolet, 499,0,499,500);    // right vertical
 
-            kresPlocha.DrawEllipse(Pens.Red, 100,100,300,300);
+            kresPlocha.DrawEllipse(Pens.Red, 100,100,300,300);  // kružnice
         }
     }
 }
