@@ -26,14 +26,14 @@ namespace kresleni_mrizky
             // horizontální výpis čar
             for (int i = 0; i < 11; i++)
             {
-                kresPlocha.DrawLine(Pens.DarkRed, 0, vertikalni, 600, vertikalni);
+                kresPlocha.DrawLine(Pens.Crimson, 0, vertikalni, 600, vertikalni);
                 vertikalni += 60;
             }
 
             // vertikální výpis čar
             for (int i = 0; i < 11; i++)
             {
-                kresPlocha.DrawLine(Pens.DarkRed, horizontalni, 0, horizontalni, 600);
+                kresPlocha.DrawLine(Pens.Turquoise, horizontalni, 0, horizontalni, 600);
                 horizontalni += 60;
             }
         }
