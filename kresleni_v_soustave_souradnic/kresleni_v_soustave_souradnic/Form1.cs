@@ -33,7 +33,7 @@ namespace kresleni_v_soustave_souradnic
 
         private void panelSoustava_Paint(object sender, PaintEventArgs e)
         {
-            kresPlocha = e.Graphics;
+            kresPlocha = panelSoustava.CreateGraphics();
 
             kresPlocha.DrawLine(barva, 300, 0, 300, 600);
             kresPlocha.DrawLine(barva, 0, 300, 600, 300);
@@ -45,9 +45,9 @@ namespace kresleni_v_soustave_souradnic
             kruz.sourX = Convert.ToInt32(numericUpDownX.Value);
             kruz.sourY = Convert.ToInt32(numericUpDownY.Value);
 
-            kruz.hodnotaX = Convert.ToInt32(300 + kruz.sourX - kruz.polomer);
-            kruz.hodnotaY = Convert.ToInt32(300 + kruz.sourY - kruz.polomer);
-            kresPlocha.DrawEllipse(barva, kruz.hodnotaX, kruz.hodnotaY, kruz.polomer, kruz.polomer);
+            kruz.hodnotaX = Convert.ToInt32(600 / 2 + kruz.sourX - kruz.polomer);
+            kruz.hodnotaY = Convert.ToInt32(600 / 2 - kruz.sourY - kruz.polomer);
+            kresPlocha.DrawEllipse(barva, kruz.hodnotaX, kruz.hodnotaY, 2 * kruz.polomer, 2 * kruz.polomer);
         }
     }
 }

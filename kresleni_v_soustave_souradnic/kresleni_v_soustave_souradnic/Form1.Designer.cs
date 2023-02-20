@@ -24,8 +24,8 @@ namespace kresleni_v_soustave_souradnic
         #region Kód generovaný Návrhářem Windows Form
 
         /// <summary>
-        /// Metoda vyžadovaná pro podporu Návrháře - neupravovat
-        /// obsah této metody v editoru kódu.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -147,7 +147,7 @@ namespace kresleni_v_soustave_souradnic
             this.numericUpDownPolomer.Size = new System.Drawing.Size(70, 27);
             this.numericUpDownPolomer.TabIndex = 6;
             this.numericUpDownPolomer.Value = new decimal(new int[] {
-            1,
+            100,
             0,
             0,
             0});
