@@ -24,8 +24,8 @@ namespace kresleni_v_soustave_souradnic
         #region Kód generovaný Návrhářem Windows Form
 
         /// <summary>
-        /// Metoda vyžadovaná pro podporu Návrháře - neupravovat
-        /// obsah této metody v editoru kódu.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -56,16 +56,8 @@ namespace kresleni_v_soustave_souradnic
             // 
             this.numericUpDownX.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownX.Location = new System.Drawing.Point(77, 46);
-            this.numericUpDownX.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDownX.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
+            this.numericUpDownX.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            this.numericUpDownX.Minimum = new decimal(new int[] { 300, 0, 0, -2147483648 });
             this.numericUpDownX.Name = "numericUpDownX";
             this.numericUpDownX.Size = new System.Drawing.Size(70, 27);
             this.numericUpDownX.TabIndex = 0;
@@ -84,16 +76,8 @@ namespace kresleni_v_soustave_souradnic
             // 
             this.numericUpDownY.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownY.Location = new System.Drawing.Point(77, 79);
-            this.numericUpDownY.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDownY.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
+            this.numericUpDownY.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            this.numericUpDownY.Minimum = new decimal(new int[] { 300, 0, 0, -2147483648 });
             this.numericUpDownY.Name = "numericUpDownY";
             this.numericUpDownY.Size = new System.Drawing.Size(70, 27);
             this.numericUpDownY.TabIndex = 2;
@@ -101,11 +85,11 @@ namespace kresleni_v_soustave_souradnic
             // buttonZadat
             // 
             this.buttonZadat.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonZadat.Location = new System.Drawing.Point(153, 48);
+            this.buttonZadat.Location = new System.Drawing.Point(153, 66);
             this.buttonZadat.Name = "buttonZadat";
-            this.buttonZadat.Size = new System.Drawing.Size(75, 23);
+            this.buttonZadat.Size = new System.Drawing.Size(107, 52);
             this.buttonZadat.TabIndex = 3;
-            this.buttonZadat.Text = "Zadat střed";
+            this.buttonZadat.Text = "Nakreslit kružnici";
             this.buttonZadat.UseVisualStyleBackColor = true;
             this.buttonZadat.Click += new System.EventHandler(this.buttonZadat_Click);
             // 
@@ -133,24 +117,12 @@ namespace kresleni_v_soustave_souradnic
             // 
             this.numericUpDownPolomer.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownPolomer.Location = new System.Drawing.Point(77, 112);
-            this.numericUpDownPolomer.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDownPolomer.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numericUpDownPolomer.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            this.numericUpDownPolomer.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             this.numericUpDownPolomer.Name = "numericUpDownPolomer";
             this.numericUpDownPolomer.Size = new System.Drawing.Size(70, 27);
             this.numericUpDownPolomer.TabIndex = 6;
-            this.numericUpDownPolomer.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numericUpDownPolomer.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // label4
             // 
@@ -183,7 +155,6 @@ namespace kresleni_v_soustave_souradnic
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPolomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

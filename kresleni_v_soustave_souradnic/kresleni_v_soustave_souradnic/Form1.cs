@@ -17,37 +17,37 @@ namespace kresleni_v_soustave_souradnic
             InitializeComponent();
         }
 
-        private Graphics kresPlocha;
-        private Pen barva = Pens.Crimson;
+        private Graphics kresPlocha;    // deklarace proměnné
+        private Pen barva = Pens.Crimson;   // do proměnné 'barva' se uloží karmínová (crimson) barva
 
-        struct kruznice
+        struct kruznice     // deklarace proměnných potřebných pro kreslení kružnice ve 'struct'
         {
             public int polomer;
-            public int sourX;
+            public int sourX;   // zadané souřadnice X a Y
             public int sourY;
-            public int hodnotaX;
+            public int hodnotaX;   // kde se vykreslí roh kružnice 
             public int hodnotaY;
         }
 
-        private kruznice kruz;
+        private kruznice kruz;  // inicializace proměnné
 
         private void panelSoustava_Paint(object sender, PaintEventArgs e)
         {
-            kresPlocha = e.Graphics;
+            kresPlocha = panelSoustava.CreateGraphics();    // inicializace kreslící plochy
 
-            kresPlocha.DrawLine(barva, 300, 0, 300, 600);
+            kresPlocha.DrawLine(barva, 300, 0, 300, 600);   // nakreslení os
             kresPlocha.DrawLine(barva, 0, 300, 600, 300);
         }
 
-        private void buttonZadat_Click(object sender, EventArgs e)
+        private void buttonZadat_Click(object sender, EventArgs e)      // po kliknutí na tlačítko...
         {
             kruz.polomer = Convert.ToInt32(numericUpDownPolomer.Value);
             kruz.sourX = Convert.ToInt32(numericUpDownX.Value);
             kruz.sourY = Convert.ToInt32(numericUpDownY.Value);
 
-            kruz.hodnotaX = Convert.ToInt32(300 + kruz.sourX - kruz.polomer);
-            kruz.hodnotaY = Convert.ToInt32(300 + kruz.sourY - kruz.polomer);
-            kresPlocha.DrawEllipse(barva, kruz.hodnotaX, kruz.hodnotaY, kruz.polomer, kruz.polomer);
+            kruz.hodnotaX = Convert.ToInt32(600 / 2 + kruz.sourX - kruz.polomer);   // vypočítá se hodnota X 'rohu' kružnice
+            kruz.hodnotaY = Convert.ToInt32(600 / 2 - kruz.sourY - kruz.polomer);   // vypočítá se hodnota Y 'rohu' kružnice
+            kresPlocha.DrawEllipse(barva, kruz.hodnotaX, kruz.hodnotaY, 2 * kruz.polomer, 2 * kruz.polomer);
         }
     }
 }
