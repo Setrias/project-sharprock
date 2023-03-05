@@ -42,7 +42,7 @@ namespace kresleni_combobox
                 int sourX = 300 - velikost / 2; // výpočet rohu kružnice
                 int sourY = 300 - velikost / 2;
 
-                Pen pero = new Pen(Color.Crimson, width: 3);
+                Pen pero = new Pen(Color.Crimson, 3);
 
                 for (int i = 0; i < 5; i++)
                 {
@@ -58,12 +58,12 @@ namespace kresleni_combobox
                 panelKresleni.Refresh();
                 
                 int velikost = 50;
-                int operVelikost = velikost;
+                int operVelikost = velikost;    // statická velikost pro univerzálnost změny jako jediné proměnné
                 int pocetCtvercu = 5;
                 int sourX = 300 - pocetCtvercu * (velikost / 2);
                 int sourY = 300 - pocetCtvercu * (velikost / 2);
 
-                Pen pero = new Pen(Color.DeepSkyBlue, width: 3);
+                Pen pero = new Pen(Color.DeepSkyBlue, 3);
 
                 for (int i = 0; i < pocetCtvercu; i++)
                 {
@@ -84,6 +84,7 @@ namespace kresleni_combobox
                     int sourY = randNum.Next(-50, 500);
                     int prumer = randNum.Next(20, 300);
 
+                    // testovaní aby náhodné čísla nebyly stejné, jsou založené na čase
                     if (sourX == sourY)
                     {
                         sourY = randNum.Next(0, 500);
@@ -94,7 +95,7 @@ namespace kresleni_combobox
                         prumer = randNum.Next(20, 300);
                     }
 
-                    Pen pero = new Pen(Color.Black, width: 1);
+                    Pen pero = new Pen(Color.Black, 2);
 
                     kresPlocha.DrawEllipse(pero, sourX, sourY, prumer, prumer);
                 }
@@ -102,7 +103,26 @@ namespace kresleni_combobox
 
             if (comboBoxTvary.SelectedIndex == 3)
             {
+                panelKresleni.Refresh();
+                Pen peroBlue = new Pen(Color.DeepSkyBlue, 2);
+                Pen peroRed = new Pen(Color.Red, 2);
+
+                int sirka = 260, vyska = 260;
+
+                int sourX = 300 - sirka / 2; // výpočet souřadnic rohu kružnic
+                int sourY = 300 - vyska / 2;
+
+                for (int i = 0; i < 25; i++)
+                {
+                    kresPlocha.DrawEllipse(peroBlue, sourX, 200, sirka, 250);
+                    sirka -= 10;
+                }
                 
+                for (int i = 0; i < 25; i++)
+                {
+                    kresPlocha.DrawEllipse(peroRed, 200, sourY, 250, vyska);
+                    vyska -= 10;
+                }
             }
         }
     }
