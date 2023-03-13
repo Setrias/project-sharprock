@@ -41,6 +41,13 @@ namespace struct_array_vazena_znamka
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxPrumer = new System.Windows.Forms.TextBox();
             this.buttonKonec = new System.Windows.Forms.Button();
+            this.comboBoxPredmet = new System.Windows.Forms.ComboBox();
+            this.buttonPredmetVypis = new System.Windows.Forms.Button();
+            this.comboBoxPredmetVypis = new System.Windows.Forms.ComboBox();
+            this.comboBoxVahaVypis = new System.Windows.Forms.ComboBox();
+            this.buttonVahaVypis = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPrumerPredmet = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZnamka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVaha)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +61,7 @@ namespace struct_array_vazena_znamka
             0,
             0,
             65536});
-            this.numericUpDownZnamka.Location = new System.Drawing.Point(69, 44);
+            this.numericUpDownZnamka.Location = new System.Drawing.Point(70, 77);
             this.numericUpDownZnamka.Maximum = new decimal(new int[] {
             5,
             0,
@@ -87,7 +94,7 @@ namespace struct_array_vazena_znamka
             // numericUpDownVaha
             // 
             this.numericUpDownVaha.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownVaha.Location = new System.Drawing.Point(69, 77);
+            this.numericUpDownVaha.Location = new System.Drawing.Point(70, 110);
             this.numericUpDownVaha.Maximum = new decimal(new int[] {
             4,
             0,
@@ -111,7 +118,7 @@ namespace struct_array_vazena_znamka
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(12, 49);
+            this.label2.Location = new System.Drawing.Point(13, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 3;
@@ -121,7 +128,7 @@ namespace struct_array_vazena_znamka
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(28, 82);
+            this.label3.Location = new System.Drawing.Point(29, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 4;
@@ -130,7 +137,7 @@ namespace struct_array_vazena_znamka
             // buttonZadat
             // 
             this.buttonZadat.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonZadat.Location = new System.Drawing.Point(132, 44);
+            this.buttonZadat.Location = new System.Drawing.Point(133, 77);
             this.buttonZadat.Name = "buttonZadat";
             this.buttonZadat.Size = new System.Drawing.Size(112, 27);
             this.buttonZadat.TabIndex = 5;
@@ -142,7 +149,7 @@ namespace struct_array_vazena_znamka
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(12, 116);
+            this.label4.Location = new System.Drawing.Point(13, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 16);
             this.label4.TabIndex = 6;
@@ -150,7 +157,7 @@ namespace struct_array_vazena_znamka
             // 
             // textBoxPocetZadanych
             // 
-            this.textBoxPocetZadanych.Location = new System.Drawing.Point(151, 115);
+            this.textBoxPocetZadanych.Location = new System.Drawing.Point(152, 148);
             this.textBoxPocetZadanych.Name = "textBoxPocetZadanych";
             this.textBoxPocetZadanych.ReadOnly = true;
             this.textBoxPocetZadanych.Size = new System.Drawing.Size(47, 20);
@@ -161,16 +168,16 @@ namespace struct_array_vazena_znamka
             this.listBoxPrehled.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxPrehled.FormattingEnabled = true;
             this.listBoxPrehled.ItemHeight = 16;
-            this.listBoxPrehled.Location = new System.Drawing.Point(250, 51);
+            this.listBoxPrehled.Location = new System.Drawing.Point(294, 9);
             this.listBoxPrehled.Name = "listBoxPrehled";
-            this.listBoxPrehled.Size = new System.Drawing.Size(141, 84);
+            this.listBoxPrehled.Size = new System.Drawing.Size(173, 244);
             this.listBoxPrehled.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(96, 142);
+            this.label5.Location = new System.Drawing.Point(97, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 9;
@@ -178,7 +185,7 @@ namespace struct_array_vazena_znamka
             // 
             // textBoxPrumer
             // 
-            this.textBoxPrumer.Location = new System.Drawing.Point(151, 141);
+            this.textBoxPrumer.Location = new System.Drawing.Point(152, 174);
             this.textBoxPrumer.Name = "textBoxPrumer";
             this.textBoxPrumer.ReadOnly = true;
             this.textBoxPrumer.Size = new System.Drawing.Size(47, 20);
@@ -187,7 +194,7 @@ namespace struct_array_vazena_znamka
             // buttonKonec
             // 
             this.buttonKonec.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKonec.Location = new System.Drawing.Point(132, 77);
+            this.buttonKonec.Location = new System.Drawing.Point(133, 110);
             this.buttonKonec.Name = "buttonKonec";
             this.buttonKonec.Size = new System.Drawing.Size(112, 27);
             this.buttonKonec.TabIndex = 11;
@@ -195,11 +202,102 @@ namespace struct_array_vazena_znamka
             this.buttonKonec.UseVisualStyleBackColor = true;
             this.buttonKonec.Click += new System.EventHandler(this.buttonKonec_Click);
             // 
+            // comboBoxPredmet
+            // 
+            this.comboBoxPredmet.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPredmet.FormattingEnabled = true;
+            this.comboBoxPredmet.Items.AddRange(new object[] {
+            "ANJ",
+            "CJL",
+            "MAT",
+            "ELN",
+            "ELM"});
+            this.comboBoxPredmet.Location = new System.Drawing.Point(16, 44);
+            this.comboBoxPredmet.Name = "comboBoxPredmet";
+            this.comboBoxPredmet.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPredmet.TabIndex = 12;
+            // 
+            // buttonPredmetVypis
+            // 
+            this.buttonPredmetVypis.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPredmetVypis.Location = new System.Drawing.Point(16, 200);
+            this.buttonPredmetVypis.Name = "buttonPredmetVypis";
+            this.buttonPredmetVypis.Size = new System.Drawing.Size(145, 23);
+            this.buttonPredmetVypis.TabIndex = 13;
+            this.buttonPredmetVypis.Text = "Piš známky z předmětu: ";
+            this.buttonPredmetVypis.UseVisualStyleBackColor = true;
+            this.buttonPredmetVypis.Click += new System.EventHandler(this.buttonPredmetVypis_Click);
+            // 
+            // comboBoxPredmetVypis
+            // 
+            this.comboBoxPredmetVypis.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPredmetVypis.FormattingEnabled = true;
+            this.comboBoxPredmetVypis.Items.AddRange(new object[] {
+            "ANJ",
+            "CJL",
+            "MAT",
+            "ELN",
+            "ELM"});
+            this.comboBoxPredmetVypis.Location = new System.Drawing.Point(167, 200);
+            this.comboBoxPredmetVypis.Name = "comboBoxPredmetVypis";
+            this.comboBoxPredmetVypis.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPredmetVypis.TabIndex = 14;
+            // 
+            // comboBoxVahaVypis
+            // 
+            this.comboBoxVahaVypis.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxVahaVypis.FormattingEnabled = true;
+            this.comboBoxVahaVypis.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBoxVahaVypis.Location = new System.Drawing.Point(167, 256);
+            this.comboBoxVahaVypis.Name = "comboBoxVahaVypis";
+            this.comboBoxVahaVypis.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxVahaVypis.TabIndex = 16;
+            // 
+            // buttonVahaVypis
+            // 
+            this.buttonVahaVypis.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonVahaVypis.Location = new System.Drawing.Point(16, 256);
+            this.buttonVahaVypis.Name = "buttonVahaVypis";
+            this.buttonVahaVypis.Size = new System.Drawing.Size(145, 24);
+            this.buttonVahaVypis.TabIndex = 15;
+            this.buttonVahaVypis.Text = "Piš známky stejné váhy: ";
+            this.buttonVahaVypis.UseVisualStyleBackColor = true;
+            this.buttonVahaVypis.Click += new System.EventHandler(this.buttonVahaVypis_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(13, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 16);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Průměr vybraného předmětu:";
+            // 
+            // textBoxPrumerPredmet
+            // 
+            this.textBoxPrumerPredmet.Location = new System.Drawing.Point(177, 230);
+            this.textBoxPrumerPredmet.Name = "textBoxPrumerPredmet";
+            this.textBoxPrumerPredmet.ReadOnly = true;
+            this.textBoxPrumerPredmet.Size = new System.Drawing.Size(47, 20);
+            this.textBoxPrumerPredmet.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 177);
+            this.ClientSize = new System.Drawing.Size(484, 297);
+            this.Controls.Add(this.textBoxPrumerPredmet);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxVahaVypis);
+            this.Controls.Add(this.buttonVahaVypis);
+            this.Controls.Add(this.comboBoxPredmetVypis);
+            this.Controls.Add(this.buttonPredmetVypis);
+            this.Controls.Add(this.comboBoxPredmet);
             this.Controls.Add(this.buttonKonec);
             this.Controls.Add(this.textBoxPrumer);
             this.Controls.Add(this.label5);
@@ -235,6 +333,13 @@ namespace struct_array_vazena_znamka
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxPrumer;
         private System.Windows.Forms.Button buttonKonec;
+        private System.Windows.Forms.ComboBox comboBoxPredmet;
+        private System.Windows.Forms.Button buttonPredmetVypis;
+        private System.Windows.Forms.ComboBox comboBoxPredmetVypis;
+        private System.Windows.Forms.ComboBox comboBoxVahaVypis;
+        private System.Windows.Forms.Button buttonVahaVypis;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxPrumerPredmet;
     }
 }
 
