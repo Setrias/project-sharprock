@@ -67,6 +67,8 @@ namespace priprava_soutez
             }
         }
 
+// vypsání slov oddělených "," do listBoxu
+
         private void buttonVybratTxt_Click(object sender, EventArgs e)
         {
             _vyberSouboru.InitialDirectory = "C:\\Users\\tomas\\Desktop";
@@ -87,6 +89,8 @@ namespace priprava_soutez
                 }
             }
         }
+
+// přidání slova do txt souboru
 
         private void buttonPridatSlovo_Click(object sender, EventArgs e)
         {
