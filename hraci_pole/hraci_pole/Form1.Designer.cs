@@ -77,7 +77,11 @@
             // 
             this.numericUpDownSourX.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.numericUpDownSourX.Location = new System.Drawing.Point(118, 49);
-            this.numericUpDownSourX.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            this.numericUpDownSourX.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownSourX.Name = "numericUpDownSourX";
             this.numericUpDownSourX.Size = new System.Drawing.Size(123, 30);
             this.numericUpDownSourX.TabIndex = 3;
@@ -86,7 +90,11 @@
             // 
             this.numericUpDownSourY.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.numericUpDownSourY.Location = new System.Drawing.Point(118, 85);
-            this.numericUpDownSourY.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            this.numericUpDownSourY.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownSourY.Name = "numericUpDownSourY";
             this.numericUpDownSourY.Size = new System.Drawing.Size(123, 30);
             this.numericUpDownSourY.TabIndex = 5;
@@ -102,6 +110,7 @@
             // 
             // panelHraciPole
             // 
+            this.panelHraciPole.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelHraciPole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHraciPole.Location = new System.Drawing.Point(247, 52);
             this.panelHraciPole.Name = "panelHraciPole";
@@ -134,7 +143,9 @@
             // comboBoxBarva
             // 
             this.comboBoxBarva.FormattingEnabled = true;
-            this.comboBoxBarva.Items.AddRange(new object[] { "Černá", "Modrá", "Červená", "Zelená" });
+            this.comboBoxBarva.Items.AddRange(new object[] {
+            "Černá",
+            "Bílá"});
             this.comboBoxBarva.Location = new System.Drawing.Point(118, 121);
             this.comboBoxBarva.Name = "comboBoxBarva";
             this.comboBoxBarva.Size = new System.Drawing.Size(123, 21);
@@ -171,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSourY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.ComboBox comboBoxBarva;

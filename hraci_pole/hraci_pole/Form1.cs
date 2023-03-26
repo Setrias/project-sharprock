@@ -30,7 +30,7 @@ namespace hraci_pole
 
         private int rozmer = 10, pocetZetonu, sourX, sourY;
 
-        // private Pen pero = new Pen(Color.Crimson, 3);
+        private Pen pero = new Pen(Color.Crimson, 3);
         private Brush point = new SolidBrush(Color.Black);
 
         private void buttonZadat_Click(object sender, EventArgs e)
@@ -40,23 +40,15 @@ namespace hraci_pole
                 zeton[pocetZetonu].poziceX = Convert.ToInt32(numericUpDownSourX.Value);
                 zeton[pocetZetonu].poziceY = Convert.ToInt32(numericUpDownSourY.Value);
                 zeton[pocetZetonu].barva = comboBoxBarva.Text;
-
+                
                 switch (zeton[pocetZetonu].barva)
                 {
                     case "Černá":
                         point = new SolidBrush(Color.Black);
                         break;
 
-                    case "Modrá":
-                        point = new SolidBrush(Color.DeepSkyBlue);
-                        break;
-
-                    case "Červená":
-                        point = new SolidBrush(Color.Red);
-                        break;
-
-                    case "Zelená":
-                        point = new SolidBrush(Color.ForestGreen);
+                    case "Bílá":
+                        point = new SolidBrush(Color.White);
                         break;
                 }
 
@@ -82,6 +74,7 @@ namespace hraci_pole
 
         private void buttonPozice_Click(object sender, EventArgs e)
         {
+            listBoxZetony.Items.Clear();
             for (int i = 0; i < pocetZetonu; i++)
             {
                 if (zeton[i].barva == "Černá")
