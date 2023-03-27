@@ -30,7 +30,7 @@ namespace hraci_pole
 
         private int rozmer = 10, pocetZetonu, sourX, sourY;
 
-        private Pen pero = new Pen(Color.Crimson, 3);
+        // private Pen pero = new Pen(Color.Crimson, 3);
         private Brush point = new SolidBrush(Color.Black);
 
         private void buttonZadat_Click(object sender, EventArgs e)
