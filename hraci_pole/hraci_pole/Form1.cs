@@ -17,55 +17,49 @@ namespace hraci_pole
             InitializeComponent();
         }
 
-        private Graphics hraciPole;
+        private Graphics _hraciPole;
 
-        struct zetonyPar
+        struct ZetonyPar // deklarace datového typu
         {
-            public int poziceX;
-            public int poziceY;
-            public string barva;
+            public int PoziceX;
+            public int PoziceY;
+            public string Barva;
         }
 
-        private zetonyPar[] zetony = new zetonyPar[6];
+        private ZetonyPar[] _zetony = new ZetonyPar[6]; // inicializace datového typu
 
-        private int rozmer = 10, pocetZetonu, sourX, sourY;
-        private bool konec;
+        private int _rozmer = 10, _pocetZetonu, _sourX, _sourY;
+        private bool _konec;
 
-        // private Pen pero = new Pen(Color.Crimson, 3);
-        private Brush point = new SolidBrush(Color.Black);
+        private Brush _point = new SolidBrush(Color.Black); // deklarace 'štětce'
 
         private void buttonZadat_Click(object sender, EventArgs e)
         {
-            if (comboBoxBarva.Text != "")
+            if (comboBoxBarva.Text != "") // když není v comboBoxu nic vybrané, zobrazí se MessageBox "Zadej barvu"
             {
-                zetony[pocetZetonu].poziceX = Convert.ToInt32(numericUpDownSourX.Value);
-                zetony[pocetZetonu].poziceY = Convert.ToInt32(numericUpDownSourY.Value);
-                zetony[pocetZetonu].barva = comboBoxBarva.Text;
-                
-                // switch (zetony[pocetZetonu].barva)
-                // {
-                //     case "Černá":
-                //         point = new SolidBrush(Color.Black);
-                //         break;
-                //
-                //     case "Bílá":
-                //         point = new SolidBrush(Color.White);
-                //         break;
-                // }
-
-                // sourX = zetony[pocetZetonu].poziceX * 50 - rozmer / 2;
-                // sourY = zetony[pocetZetonu].poziceY * 50 - rozmer / 2;
-
-                // hraciPole.FillEllipse(point, sourX, sourY, rozmer, rozmer);
-
-                pocetZetonu++;
-
-                if (pocetZetonu == 6)
+                if (_pocetZetonu == 0) // uložení první hodnoty
                 {
-                    konec = true;
+                    UlozeniParametru();
+                }
+                else
+                {
+                    if (!TestObsazeni()) // když se nenašel stejný bod mezi uloženými >> uloží se zadaná hodnota
+                    {
+                        UlozeniParametru();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tento bod už je obsazený.");
+                    }
+                }
+
+                if (_pocetZetonu == 6) // poslední žeton zadán
+                {
+                    _konec = true;
                     buttonZadat.Enabled = false;
                     numericUpDownSourX.Enabled = false;
                     numericUpDownSourY.Enabled = false;
+                    panelHraciPole.Refresh(); // znovuvykreslení po dokončení ukládání žetonů
                 }
             }
             else
@@ -74,49 +68,68 @@ namespace hraci_pole
             }
         }
 
+        private void UlozeniParametru() // metoda pro uložení hodnot (kvůli duplicitě)
+        {
+            _zetony[_pocetZetonu].PoziceX = Convert.ToInt32(numericUpDownSourX.Value);
+            _zetony[_pocetZetonu].PoziceY = Convert.ToInt32(numericUpDownSourY.Value);
+            _zetony[_pocetZetonu].Barva = comboBoxBarva.Text;
+
+            _pocetZetonu++;
+        }
+
+        private bool TestObsazeni() // funkce testující souřadnice žetonů, vrací Bool hodnotu
+        {
+            bool found = false;
+            for (int i = 0; i < _pocetZetonu; i++)
+            {
+                if (numericUpDownSourX.Value == _zetony[i].PoziceX && numericUpDownSourY.Value == _zetony[i].PoziceY)
+                {
+                    found = true; // když se našel stejný bod
+                }
+            }
+
+            return found;
+        }
+
         private void buttonPozice_Click(object sender, EventArgs e)
         {
-            listBoxZetony.Items.Clear();
-            for (int i = 0; i < pocetZetonu; i++)
+            listBoxZetony.Items.Clear(); // vymazání listBoxu
+            for (int i = 0; i < _pocetZetonu; i++)
             {
-                if (zetony[i].barva == "Černá")
+                if (_zetony[i].Barva == "Černá") // vypsání souřadnic černých bodů do listBoxu
                 {
-                    listBoxZetony.Items.Add("Souřadnice X: " + zetony[i].poziceX + ", Souřadnice Y:" + zetony[i].poziceY);
+                    listBoxZetony.Items.Add("Souřadnice X: " + _zetony[i].PoziceX + ", Souřadnice Y:" + _zetony[i].PoziceY);
                 }
             }
         }
 
-        private int j;
         private void panelHraciPole_Paint(object sender, PaintEventArgs e)
         {
-            hraciPole = panelHraciPole.CreateGraphics();
+            _hraciPole = panelHraciPole.CreateGraphics();
 
-            if (konec)
+            if (_konec) // po zadání poslední hodnoty se žetony vykreslí do panelu
             {
-                for (int i = 0; i < pocetZetonu; i++)
+                for (int i = 0; i < _pocetZetonu; i++)
                 {
-                    sourX = zetony[j].poziceX * 50 - rozmer / 2;
-                    sourY = zetony[j].poziceY * 50 - rozmer / 2;
-                    hraciPole.FillEllipse(barvaBodu(), sourX, sourY, rozmer, rozmer);
-                    j++;
+                    _sourX = _zetony[i].PoziceX * 50 - _rozmer / 2;
+                    _sourY = _zetony[i].PoziceY * 50 - _rozmer / 2;
+                    _hraciPole.FillEllipse(BarvaBodu(i), _sourX, _sourY, _rozmer, _rozmer);
                 }
             }
         }
 
-        private Brush barvaBodu()
+        private Brush BarvaBodu(int i) // funkce pro automatickou volbu barvy podle uložené hodnoty
         {
-            switch (zetony[j].barva)
+            if (_zetony[i].Barva == "Černá")
             {
-                case "Černá":
-                    point = new SolidBrush(Color.Black);
-                    break;
-
-                case "Bílá":
-                    point = new SolidBrush(Color.White);
-                    break;
+                _point = new SolidBrush(Color.Black);
+            }
+            else
+            {
+                _point = new SolidBrush(Color.White);
             }
 
-            return point;
+            return _point;
         }
     }
 }
