@@ -18,12 +18,9 @@ namespace soubory
             InitializeComponent();
         }
 
-        private string jmeno;
-        private FileStream fs;
-
         private void buttonUlozit_Click(object sender, EventArgs e)
         {
-            jmeno = textBoxJmeno.Text;
+            string jmeno = textBoxJmeno.Text;
             if (jmeno.Trim() != "")
             {
                 using (StreamWriter sWriter = new StreamWriter("seznam.txt", true))
