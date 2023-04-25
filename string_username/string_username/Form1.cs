@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,10 +69,38 @@ namespace string_username
             // 2. Možnost zkrácení slov (Zase Substring = "od kama, jak dlouhé")
             prijmeniShort = prijmeni.Substring(0, 3);
             jmenoShort = jmeno.Substring(0, 2);
+            
+            // * jde to napsat na jeden řádek
+            // prijmeniShort = prijmeni.Substring(0, 3).ToLower();
+            prijmeniShort = prijmeniShort.ToLower();
+            jmenoShort = jmenoShort.ToLower();
+
+            prijmeniShort = RemoveDiacritics(prijmeniShort);
+            jmenoShort = RemoveDiacritics(jmenoShort);
 
 
-            // Výpis
+                // Výpis
             textBoxUsername.Text = rokDve + mesic + prijmeniShort + jmenoShort;
+        }
+        
+        static string RemoveDiacritics(string text) 
+        {
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder(capacity: normalizedString.Length);
+
+            for (int i = 0; i < normalizedString.Length; i++)
+            {
+                char c = normalizedString[i];
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder
+                .ToString()
+                .Normalize(NormalizationForm.FormC);
         }
     }
 }

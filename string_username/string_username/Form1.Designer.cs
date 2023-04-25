@@ -72,7 +72,7 @@
             this.textBoxPrijmeni.Location = new System.Drawing.Point(72, 70);
             this.textBoxPrijmeni.Name = "textBoxPrijmeni";
             this.textBoxPrijmeni.Size = new System.Drawing.Size(144, 23);
-            this.textBoxPrijmeni.TabIndex = 2;
+            this.textBoxPrijmeni.TabIndex = 1;
             // 
             // label3
             // 
@@ -91,7 +91,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.ReadOnly = true;
             this.textBoxUsername.Size = new System.Drawing.Size(204, 23);
-            this.textBoxUsername.TabIndex = 5;
+            this.textBoxUsername.TabIndex = 3;
             // 
             // buttonVytvorit
             // 
@@ -99,7 +99,7 @@
             this.buttonVytvorit.Location = new System.Drawing.Point(12, 99);
             this.buttonVytvorit.Name = "buttonVytvorit";
             this.buttonVytvorit.Size = new System.Drawing.Size(204, 40);
-            this.buttonVytvorit.TabIndex = 6;
+            this.buttonVytvorit.TabIndex = 2;
             this.buttonVytvorit.Text = "Vytvořit";
             this.buttonVytvorit.UseVisualStyleBackColor = true;
             this.buttonVytvorit.Click += new System.EventHandler(this.buttonVytvorit_Click);
