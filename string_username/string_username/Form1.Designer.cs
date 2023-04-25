@@ -89,6 +89,7 @@
             this.textBoxUsername.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.Location = new System.Drawing.Point(12, 145);
             this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
             this.textBoxUsername.Size = new System.Drawing.Size(204, 23);
             this.textBoxUsername.TabIndex = 5;
             // 
@@ -107,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(229, 180);
             this.Controls.Add(this.buttonVytvorit);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label3);
@@ -116,7 +117,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxJmeno);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Vytváření uživatelského jména";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
