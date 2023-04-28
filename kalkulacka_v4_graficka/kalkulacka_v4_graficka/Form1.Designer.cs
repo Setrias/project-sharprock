@@ -34,10 +34,7 @@
             this.toolStripMenuTyp = new System.Windows.Forms.ToolStripMenuItem();
             this.klasickáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.převodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uiClassic = new System.Windows.Forms.Panel();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.miniToolStrip.SuspendLayout();
-            this.uiClassic.SuspendLayout();
             this.SuspendLayout();
             // 
             // miniToolStrip
@@ -46,9 +43,8 @@
             this.miniToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.toolStripMenuTyp });
             this.miniToolStrip.Location = new System.Drawing.Point(0, 0);
             this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.Size = new System.Drawing.Size(222, 24);
+            this.miniToolStrip.Size = new System.Drawing.Size(231, 24);
             this.miniToolStrip.TabIndex = 0;
-            this.miniToolStrip.Visible = false;
             // 
             // toolStripMenuTyp
             // 
@@ -71,46 +67,22 @@
             this.převodToolStripMenuItem.Text = "Převod";
             this.převodToolStripMenuItem.Click += new System.EventHandler(this.převodToolStripMenuItem_Click);
             // 
-            // uiClassic
-            // 
-            this.uiClassic.Controls.Add(this.textBoxResult);
-            this.uiClassic.Location = new System.Drawing.Point(12, 27);
-            this.uiClassic.Name = "uiClassic";
-            this.uiClassic.Size = new System.Drawing.Size(200, 300);
-            this.uiClassic.TabIndex = 1;
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxResult.Location = new System.Drawing.Point(3, 3);
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ReadOnly = true;
-            this.textBoxResult.Size = new System.Drawing.Size(194, 52);
-            this.textBoxResult.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(222, 336);
-            this.Controls.Add(this.uiClassic);
+            this.ClientSize = new System.Drawing.Size(231, 310);
             this.Controls.Add(this.miniToolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";
+            this.Text = "Kalkulačka";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.miniToolStrip.ResumeLayout(false);
             this.miniToolStrip.PerformLayout();
-            this.uiClassic.ResumeLayout(false);
-            this.uiClassic.PerformLayout();
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.TextBox textBoxResult;
-
-        private System.Windows.Forms.Panel uiClassic;
 
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuTyp;
 
