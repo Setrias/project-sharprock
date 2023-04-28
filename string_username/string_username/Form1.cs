@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,11 @@ namespace string_username
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            AcceptButton = buttonVytvorit;
         }
 
         private string jmeno, prijmeni;
@@ -39,12 +46,12 @@ namespace string_username
             // 1. Možnost zkrácení slov (při opětovném stisknutí tlačítka by se musel 'jmenoShort' a 'prijmeniShort' "vynulovat"(jmenoShort = "";))
             // for (int i = 0; i < 3; i++)
             // {
-                // prijmeniShort += prijmeni[i];
+            // prijmeniShort += prijmeni[i];
             // }
 
             // for (int i = 0; i < 2; i++)
             // {
-                // jmenoShort += jmeno[i];
+            // jmenoShort += jmeno[i];
             // }
 
             // textBoxUsername.Text = rokDve + mesic.ToString("D2") + prijmeniShort + jmenoShort;
@@ -69,7 +76,7 @@ namespace string_username
             // 2. Možnost zkrácení slov (Zase Substring = "od kama, jak dlouhé")
             prijmeniShort = prijmeni.Substring(0, 3);
             jmenoShort = jmeno.Substring(0, 2);
-            
+
             // * jde to napsat na jeden řádek
             // prijmeniShort = prijmeni.Substring(0, 3).ToLower();
             prijmeniShort = prijmeniShort.ToLower();
@@ -78,12 +85,33 @@ namespace string_username
             prijmeniShort = RemoveDiacritics(prijmeniShort);
             jmenoShort = RemoveDiacritics(jmenoShort);
 
+            // seskládání uživatelského jména
+            string username = rokDve + mesic + prijmeniShort + jmenoShort;
 
-                // Výpis
-            textBoxUsername.Text = rokDve + mesic + prijmeniShort + jmenoShort;
+
+            // uložení do souboru
+            using (StreamWriter sWriter = new StreamWriter("username.txt", true))
+            {
+                if (File.Exists("username.txt"))
+                {
+                    sWriter.WriteLine(username);
+                    sWriter.Flush();
+                }
+                else
+                {
+                    MessageBox.Show("Soubor pro ukládání uživatelských jmen neexistuje.");
+                }
+            }
+
+            // Výpis
+            textBoxUsername.Text = username;
+            ActiveControl = textBoxJmeno;
+
+            textBoxJmeno.Text = "";
+            textBoxPrijmeni.Text = "";
         }
-        
-        static string RemoveDiacritics(string text) 
+
+        static string RemoveDiacritics(string text)
         {
             var normalizedString = text.Normalize(NormalizationForm.FormD);
             var stringBuilder = new StringBuilder(capacity: normalizedString.Length);
@@ -101,6 +129,18 @@ namespace string_username
             return stringBuilder
                 .ToString()
                 .Normalize(NormalizationForm.FormC);
+        }
+
+        private void buttonOpenSoubor_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("username.txt"))
+            {
+                Process.Start("notepad.exe", "username.txt");
+            }
+            else
+            {
+                MessageBox.Show("Soubor s uživatelskými jmény se nepodařilo otevřít.");
+            }
         }
     }
 }

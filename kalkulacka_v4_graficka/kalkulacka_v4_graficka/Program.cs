@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Buchtík_hmotnost_kvádru
+namespace kalkulacka_v4_graficka
 {
     static class Program
     {
         /// <summary>
-        /// Hlavní vstupní bod aplikace.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()

@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.buttonVytvorit = new System.Windows.Forms.Button();
+            this.buttonOpenSoubor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxJmeno
@@ -104,11 +105,23 @@
             this.buttonVytvorit.UseVisualStyleBackColor = true;
             this.buttonVytvorit.Click += new System.EventHandler(this.buttonVytvorit_Click);
             // 
+            // buttonOpenSoubor
+            // 
+            this.buttonOpenSoubor.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenSoubor.Location = new System.Drawing.Point(12, 174);
+            this.buttonOpenSoubor.Name = "buttonOpenSoubor";
+            this.buttonOpenSoubor.Size = new System.Drawing.Size(204, 40);
+            this.buttonOpenSoubor.TabIndex = 5;
+            this.buttonOpenSoubor.Text = "Otevřít soubor";
+            this.buttonOpenSoubor.UseVisualStyleBackColor = true;
+            this.buttonOpenSoubor.Click += new System.EventHandler(this.buttonOpenSoubor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(229, 180);
+            this.ClientSize = new System.Drawing.Size(229, 225);
+            this.Controls.Add(this.buttonOpenSoubor);
             this.Controls.Add(this.buttonVytvorit);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label3);
@@ -118,9 +131,12 @@
             this.Controls.Add(this.textBoxJmeno);
             this.Name = "Form1";
             this.Text = "Vytváření uživatelského jména";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button buttonOpenSoubor;
 
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Button buttonVytvorit;
