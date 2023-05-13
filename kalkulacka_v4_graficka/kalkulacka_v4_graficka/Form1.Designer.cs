@@ -34,16 +34,18 @@
             this.toolStripMenuTyp = new System.Windows.Forms.ToolStripMenuItem();
             this.klasickáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.převodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.AlwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miniToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // miniToolStrip
             // 
             this.miniToolStrip.AutoSize = false;
-            this.miniToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.toolStripMenuTyp });
+            this.miniToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.toolStripMenuTyp, this.toolStripMenuItem1 });
             this.miniToolStrip.Location = new System.Drawing.Point(0, 0);
             this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.Size = new System.Drawing.Size(231, 24);
+            this.miniToolStrip.Size = new System.Drawing.Size(244, 24);
             this.miniToolStrip.TabIndex = 0;
             // 
             // toolStripMenuTyp
@@ -55,6 +57,8 @@
             // 
             // klasickáToolStripMenuItem
             // 
+            this.klasickáToolStripMenuItem.Checked = true;
+            this.klasickáToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.klasickáToolStripMenuItem.Name = "klasickáToolStripMenuItem";
             this.klasickáToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.klasickáToolStripMenuItem.Text = "Klasická";
@@ -67,22 +71,41 @@
             this.převodToolStripMenuItem.Text = "Převod";
             this.převodToolStripMenuItem.Click += new System.EventHandler(this.převodToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.AlwaysOnTopToolStripMenuItem });
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(63, 20);
+            this.toolStripMenuItem1.Text = "Chování";
+            // 
+            // AlwaysOnTopToolStripMenuItem
+            // 
+            this.AlwaysOnTopToolStripMenuItem.Name = "AlwaysOnTopToolStripMenuItem";
+            this.AlwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AlwaysOnTopToolStripMenuItem.Text = "Vždy nahoře";
+            this.AlwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(231, 310);
+            this.ClientSize = new System.Drawing.Size(244, 361);
             this.Controls.Add(this.miniToolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Kalkulačka";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.miniToolStrip.ResumeLayout(false);
             this.miniToolStrip.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem AlwaysOnTopToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuTyp;
 
