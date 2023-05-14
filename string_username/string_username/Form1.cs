@@ -39,29 +39,8 @@ namespace string_username
             /////////////////////////////////////////////////////
 
             // 1. Možnost datumů
-            // int rok = DateTime.Today.Year % 100;
-            // string rokDve = rok.ToString("D2");     // 'rok.ToString("D2")' určuje že číslo bude vždy na 2 místa (např.: 01,02,05,09,23,42...)
-            // int mesic = DateTime.Today.Month;
-
-            // 1. Možnost zkrácení slov (při opětovném stisknutí tlačítka by se musel 'jmenoShort' a 'prijmeniShort' "vynulovat"(jmenoShort = "";))
-            // for (int i = 0; i < 3; i++)
-            // {
-            // prijmeniShort += prijmeni[i];
-            // }
-
-            // for (int i = 0; i < 2; i++)
-            // {
-            // jmenoShort += jmeno[i];
-            // }
-
-            // textBoxUsername.Text = rokDve + mesic.ToString("D2") + prijmeniShort + jmenoShort;
-
-            /////////////////////////////////////////////////////
-
-            // 2. Možnost datumů (Substring = "počáteční znak, jak dlouhý bude")
-            // string rokDve = DateTime.Today.Year.ToString().Substring(2, 2);
-
-            /////////////////////////////////////////////////////
+            // int rok = DateTime.Today.Year % 100;     // 2023 / 100 = 20,23... jak to může dát 23 nemám ponětí
+            // int mesic = DateTime.Today.Month.ToString("D2");
 
             // 3. Možnost datumů (Podobné PHP, v uvozovkách je formát)
             // Dvouciferný rok
@@ -71,7 +50,6 @@ namespace string_username
             string mesic = DateTime.Today.ToString("MM");
 
             /////////////////////////////////////////////////////
-
 
             // 2. Možnost zkrácení slov (Zase Substring = "od kama, jak dlouhé")
             prijmeniShort = prijmeni.Substring(0, 3);
@@ -87,7 +65,6 @@ namespace string_username
 
             // seskládání uživatelského jména
             string username = rokDve + mesic + prijmeniShort + jmenoShort;
-
 
             // uložení do souboru
             using (StreamWriter sWriter = new StreamWriter("username.txt", true))
