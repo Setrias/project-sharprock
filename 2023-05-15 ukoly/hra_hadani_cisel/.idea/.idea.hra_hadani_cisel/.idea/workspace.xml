@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="388b03d8-f640-44b7-bda0-75956dc09a71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.hra_hadani_cisel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.hra_hadani_cisel/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="388b03d8-f640-44b7-bda0-75956dc09a71" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,8 +78,16 @@
       <option name="presentableId" value="Default" />
       <updated>1684135990337</updated>
       <workItem from="1684135990784" duration="3816000" />
-      <workItem from="1684587567125" duration="1069000" />
+      <workItem from="1684587567125" duration="2387000" />
     </task>
+    <task id="LOCAL-00001" summary="Hra hádání čísel 2023-05-20">
+      <created>1684591044284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684591044284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +97,7 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Hra hádání čísel 2023-05-20" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hra hádání čísel 2023-05-20" />
   </component>
 </project>
