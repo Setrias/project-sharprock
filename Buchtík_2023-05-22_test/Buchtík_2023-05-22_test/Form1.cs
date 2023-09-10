@@ -137,7 +137,7 @@ namespace Buchtík_2023_05_22_test
 
                 // výpočty
                 omegaNula = 1 / Math.Sqrt(indukcnost * kapacita);
-                delta = vyslednyOdpor / 2 * indukcnost;
+                delta = vyslednyOdpor / (2 * indukcnost);
                 omega = Math.Sqrt(Math.Pow(omegaNula, 2) - Math.Pow(delta, 2));
                 textBoxUhlovaFrekvence.Text = Convert.ToString(omega);
 

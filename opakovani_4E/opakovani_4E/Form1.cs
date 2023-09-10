@@ -61,10 +61,13 @@ namespace opakovani_4E
             textBoxRok.Text = Convert.ToString(DateTime.Now.Year);
 
             int cisloDne = Convert.ToInt32(DateTime.Now.DayOfWeek);
-            String nazevDne = "";
+            string nazevDne = "";
 
             switch (cisloDne)
             {
+                case 0:
+                    nazevDne = "Neděle";
+                    break;
                 case 1:
                     nazevDne = "Pondělí";
                     break;
@@ -82,9 +85,6 @@ namespace opakovani_4E
                     break;
                 case 6:
                     nazevDne = "Sobota";
-                    break;
-                case 7:
-                    nazevDne = "Neděle";
                     break;
             }
 
